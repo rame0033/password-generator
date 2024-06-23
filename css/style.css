@@ -77,7 +77,7 @@ button{
 }
 
 .passwords p{
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-align: center;
     color: var(--pw-color);
     background-color: var(--secondary-color);
