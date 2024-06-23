@@ -81,7 +81,7 @@ button{
     flex-direction: column;
 }
 
-.pw-container {
+.pw_container {
     width:100%;
     display: flex;
 }
@@ -90,10 +90,11 @@ button{
     color: var(--primary-color);
     background-color: var(--secondary-color);
     border-radius: 0 0.25rem 0.25rem 0;
+    height: 3rem;
 }
 /* Password string style */
 .passwords p{
-    font-size: 1rem;
+    font-size: 0.85rem;
     text-align: center;
     color: var(--pw-color);
     background-color: var(--secondary-color);
@@ -110,9 +111,5 @@ button:active{
 @media screen and (min-width:600px){
     .passwords{
         flex-direction: row;
-    }
-
-    .passwords p{
-        width:50%
     }
 }
