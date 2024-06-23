@@ -1,0 +1,20 @@
+/* KARLA AND INTER FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* VARIABLES */
+:root{
+    --primary-color: #10B981;
+    --pw-color: #5DEF92;
+    --secondary-color: #2B283A;
+    --bg-color: #ECFDF5;   
+    --heading-font: 'Karla', sans-serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+/* Global styles */
+body {
+    display:grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
