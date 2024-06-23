@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,36 @@
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
+
 <body>
     <main>
-    <div class="prompt">
-        <h1>Generate a <span>random password</span></h1>
-        <p>Never use an insecure password again.</p>
-        
-        <!-- Button -->
-        <button id="generate" onclick="gener4t3()">Generate Passwords</button>
-    </div>
+        <div class="prompt">
+            <h1>Generate a <span>random password</span></h1>
+            <p>Never use an insecure password again.</p>
 
-    <!-- Passwords -->
-    <div class="passwords">
-        <p id="1stPW-el"></p>
-        <p id="2ndPW-el"></p>
-    </div>
-</main>
+            <!-- Button -->
+            <button id="generate" onclick="gener4t3()">Generate Passwords</button>
+        </div>
+
+        <!-- Passwords -->
+        <div class="passwords">
+            <div class="pw_container">
+                <p id="1stPW-el"></p>
+                <button id="copy" onclick="copy()"><i class='bx bxs-copy-alt'></i></button>
+            </div>
+
+            <div class="pw_container">
+                <p id="2ndPW-el"></p>
+                <button id="copy" onclick="copy()"><i class='bx bxs-copy-alt'></i></button>
+            </div>
+        </div>
+    </main>
     <script src="./index.js"></script>
 </body>
+
 </html>
