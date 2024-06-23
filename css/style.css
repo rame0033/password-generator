@@ -60,6 +60,7 @@ button{
     line-height: 3rem;
 }
 
+/* Add a border below the button */
 .prompt::after {
     content: '';
     display: block;
@@ -69,6 +70,7 @@ button{
     margin: 1rem 0;
 }
 
+/* Password wrap */
 .passwords{
     display: flex;
     gap: 0.5rem;
@@ -76,6 +78,7 @@ button{
     justify-content: center;
 }
 
+/* Password string style */
 .passwords p{
     font-size: 1rem;
     text-align: center;
