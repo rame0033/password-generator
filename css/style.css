@@ -98,10 +98,14 @@ button{
     text-align: center;
     color: var(--pw-color);
     background-color: var(--secondary-color);
-    height: 1rem;
     width: 80%;
-    padding: 1rem;
+    border:none;
     border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* Remove input focus */
+input:focus{
+    outline: none;
 }
 
 button:not(#copy1):not(#copy2):active{
