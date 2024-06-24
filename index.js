@@ -37,12 +37,9 @@ function copyPW(elementId){
     pwInputElement.select()
     pwInputElement.setSelectionRange(0, 99999); // For mobile devices
 
-    navigator.clipboard.writeText(pwInputElement.value).then(() => {
-        alert("Password copied to clipboard");
-    }).catch(err => {
-        alert("Failed to copy password");
-        console.error("Error copying password: ", err);
-    });
+    navigator.clipboard.writeText(pwInputElement.value)
+
+    alert("Password copied to clipboard")
 }
 
 copyPW('firstPW-el'); // For the first password element
