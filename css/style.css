@@ -104,9 +104,13 @@ button{
     border-radius: 0.5rem 0 0 0.5rem;
 }
 
-button:active{
-    background-color:var(--pw-color);
+button:not(#copy):active{
+    transform: scale(0.95);
+}
+
+#copy:active{
     color: var(--secondary-color);
+    background-color: var(--primary-color);
 }
 
 @media screen and (min-width:600px){
