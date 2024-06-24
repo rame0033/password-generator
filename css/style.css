@@ -86,7 +86,7 @@ button{
     display: flex;
 }
 
-#copy{
+#copy1, #copy2{
     color: var(--primary-color);
     background-color: var(--secondary-color);
     border-radius: 0 0.25rem 0.25rem 0;
@@ -104,11 +104,12 @@ button{
     border-radius: 0.5rem 0 0 0.5rem;
 }
 
-button:not(#copy):active{
+button:not(#copy1):not(#copy2):active{
     transform: scale(0.95);
 }
 
-#copy:active{
+#copy1:active,
+#copy2:active{
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
