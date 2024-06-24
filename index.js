@@ -32,6 +32,7 @@ function gener4t3(){
     passwordInput2.value = generatePassword()    
 }
 
+// Copy button
 function copyPW(elementId){
     var pwInputElement = document.getElementById(elementId);
     pwInputElement.select()
