@@ -105,7 +105,8 @@ button{
 }
 
 button:active{
-    transform: scale(0.95);
+    background-color:var(--pw-color);
+    color: var(--secondary-color);
 }
 
 @media screen and (min-width:600px){
