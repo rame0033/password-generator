@@ -29,7 +29,8 @@ function generatePassword(){
 // Display generated passwords
 function gener4t3(){
     passwordInput1.value = generatePassword()
-    passwordInput2.value = generatePassword()    
+    passwordInput2.value = generatePassword()   
+    console.log("Password generated") 
 }
 
 // Copy button
@@ -41,6 +42,7 @@ function copyPW(elementId){
     navigator.clipboard.writeText(pwInputElement.value)
 
     alert("Password copied to clipboard")
+    console.log(`Password copied to clipboard: ${elementId}`)
 }
 
 copyPW('firstPW-el'); // For the first password element
