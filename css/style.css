@@ -146,9 +146,3 @@ button:not(#copy1):not(#copy2):active{
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
-
-@media screen and (min-width:600px){
-    .passwords{
-        flex-direction: row;
-    }
-}
