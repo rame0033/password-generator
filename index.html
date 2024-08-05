@@ -20,6 +20,14 @@
             <h1>Generate a <span>random password</span></h1>
             <p>Never use an insecure password again.</p>
 
+            <!-- Range input -->
+             <div class="range">
+                <div class="range-label">
+                <label for="pw-length">Password Length</label>
+                <span id="pw-length-value">8</span>
+            </div>
+                <input type="range" id="pw-length" min="8" max="30" value="8" oninput="updateLength()" >
+             </div>
             <!-- Button -->
             <button id="generate" onclick="gener4t3()">Generate Passwords</button>
         </div>

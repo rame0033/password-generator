@@ -1,12 +1,25 @@
-let firstEl = document.getElementById("firstPW-el")
-let secondEl = document.getElementById("secondPW-el")
-let passwordInput1 = document.querySelector("#firstPW-el")
-let passwordInput2 = document.querySelector("#secondPW-el")
+const firstEl = document.getElementById("firstPW-el")
+const secondEl = document.getElementById("secondPW-el")
+const passwordInput1 = document.querySelector("#firstPW-el")
+const passwordInput2 = document.querySelector("#secondPW-el")
+const slid3r = document.getElementById("pw-length")
+const rangeValue = document.getElementById("pw-length-value")
 
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
-let passwordLength = 15
+
+
+// Initial password length
+let passwordLength = 8
+
+// Password length slider
+function updateLength(){
+    passwordLength = slid3r.value
+    const min = slid3r.min
+    const max = slid3r.max
+    rangeValue.textContent = passwordLength
+}
 
 // Generate random character
 function charGen(){
