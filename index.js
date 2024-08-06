@@ -8,6 +8,7 @@ let upperBox = document.getElementById("uppercaseBox")
 let lowerBox = document.getElementById("lowercaseBox")
 let symbolBox = document.getElementById("symBox")
 let numB0x = document.getElementById("numBox")
+const promptPar = document.getElementById("prompt-par")
 
 const upperCASE = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 const lowerCASE = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
@@ -27,6 +28,10 @@ function updateLength(){
     rangeValue.textContent = passwordLength
 }
 
+function check(){
+    return upperBox.checked || lowerBox.checked || symbolBox.checked || numB0x.checked
+}
+
 // Return characters based on user selection
 function retrieveChar() {
     let characters = []
@@ -39,8 +44,6 @@ function retrieveChar() {
         characters = characters.concat(symb0ls)
     } if (numB0x.checked) {
         characters = characters.concat(numer1c)
-    } if (!numB0x.checked && !symbolBox.checked && !lowerBox.checked){
-        alert("Please select at least one character type")
     }
 
     return characters
@@ -70,6 +73,13 @@ function generatePassword(){
 
 // Display generated passwords
 function gener4t3(){
+
+    // Check if at least one character type is selected
+    if (!check()){
+        promptPar.textContent = "Please select at least one character type"
+        return
+    }
+
     passwordInput1.value = generatePassword()
     passwordInput2.value = generatePassword()   
     console.log("Password generated") 

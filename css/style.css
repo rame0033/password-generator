@@ -146,3 +146,9 @@ button:not(#copy1):not(#copy2):active{
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
+
+/* ADD STYLING TO ALERT TEXT (If no checkbox selected) */
+.prompt #prompt-par {
+    color: red;
+    font-weight: bold;
+}
