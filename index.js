@@ -78,6 +78,8 @@ function gener4t3(){
     if (!check()){
         promptPar.textContent = "Please select at least one character type"
         return
+    } else {
+        promptPar.textContent = ""
     }
 
     passwordInput1.value = generatePassword()
