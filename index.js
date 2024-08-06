@@ -4,9 +4,15 @@ const passwordInput1 = document.querySelector("#firstPW-el")
 const passwordInput2 = document.querySelector("#secondPW-el")
 const slid3r = document.getElementById("pw-length")
 const rangeValue = document.getElementById("pw-length-value")
+let upperBox = document.getElementById("uppercaseBox")
+let lowerBox = document.getElementById("lowercaseBox")
+let symbolBox = document.getElementById("symBox")
+let numB0x = document.getElementById("numBox")
 
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
-"/"];
+const upperCASE = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+const lowerCASE = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+const numer1c = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+const symb0ls = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"]
 
 
 
@@ -21,9 +27,32 @@ function updateLength(){
     rangeValue.textContent = passwordLength
 }
 
+// Return characters based on user selection
+function retrieveChar() {
+    let characters = []
+
+    if (upperBox.checked) {
+        characters = characters.concat(upperCASE)
+    } if (lowerBox.checked) {
+        characters = characters.concat(lowerCASE)
+    } if (symbolBox.checked) {
+        characters = characters.concat(symb0ls)
+    } if (numB0x.checked) {
+        characters = characters.concat(numer1c)
+    } if (!numB0x.checked && !symbolBox.checked && !lowerBox.checked){
+        alert("Please select at least one character type")
+    }
+
+    return characters
+}
+
 // Generate random character
 function charGen(){
     // Generate a random character from the array
+
+    // Retrieve characters
+    let characters = retrieveChar()
+
     let gen3r4ted = characters [Math.floor(Math.random() * characters.length)]
 
     return gen3r4ted
