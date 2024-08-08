@@ -152,3 +152,69 @@ button:not(#copy1):not(#copy2):active{
     color: red;
     font-weight: bold;
 }
+
+/* CUSTOM CHECKBOX */
+.check-item{
+    display: flex;
+    align-items: center;
+}
+
+/* Reduce bottom gap for check items */
+.label {
+    margin-bottom: 0;
+}
+
+/* Hide the default checkbox */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-checkbox .checkmark {
+    position: absolute;
+    top: 0.75rem;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #eee;
+}
+
+/* When the checkbox is checked, add a background color */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: var(--primary-color);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+    left: 0.4rem;
+    top: 0.1rem;
+    width: 0.3rem;
+    height: 0.7rem;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
