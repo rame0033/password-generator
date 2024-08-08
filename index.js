@@ -104,7 +104,11 @@ function copyPW(elementId){
         });
 }
 
-// Copy first password value on click
+/*
+=> .removeEventListener is used to prevent multiple alert prompt
+
+Copy first password value on click
+*/ 
 document.getElementById("copy1").removeEventListener("click", copyPW);
 
 // Copy second password value on click
