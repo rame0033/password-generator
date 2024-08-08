@@ -21,7 +21,7 @@ body {
 }
 
 main {
-    width: 27rem;
+    max-width: 41rem;
     border: 0.05rem solid var(--secondary-color);
     padding: 2rem;
     border-radius: 0.45rem;
@@ -30,10 +30,11 @@ main {
 h1 {
     max-width: 27rem;
     font-family: var(--heading-font);
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--secondary-color);
     margin-bottom: 1rem;
     font-weight: 800;
+    line-height: 2.5rem;
 }
 
 h1 span {
@@ -221,11 +222,13 @@ button:not(#copy1):not(#copy2):active {
     transform: rotate(45deg);
 }
 
+/* Styling for larger screen */
 @media screen and (min-width: 620px) {
 
-    /* Width of Main segment for larger screens */
-    main {
-        width: 41rem;
+    /* Main heading for larger screens */
+    h1 {
+        font-size: 3rem;
+        line-height: 2.9rem;
     }
 
     /* Checkbox wrap */
