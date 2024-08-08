@@ -151,6 +151,7 @@ button:not(#copy1):not(#copy2):active{
 .prompt #prompt-par {
     color: red;
     font-weight: bold;
+    line-height: 1.5rem;
 }
 
 /* CUSTOM CHECKBOX */
