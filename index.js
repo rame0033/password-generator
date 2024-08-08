@@ -108,7 +108,7 @@ function copyPW(elementId){
 }
 
 // Copy first password value on click
-document.getElementById("copy1").addEventListenerEventListener("click", copyPW);
+document.getElementById("copy1").addEventListener("click", copyPW);
 
 // Copy second password value on click
 document.getElementById("copy2").addEventListener("click", copyPW);
