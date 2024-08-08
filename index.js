@@ -16,7 +16,6 @@ const numer1c = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 const symb0ls = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"]
 
 
-
 // Initial password length
 let passwordLength = 8
 
@@ -77,6 +76,8 @@ function gener4t3(){
     // Check if at least one character type is selected
     if (!check()){
         promptPar.textContent = "Please select at least one character type"
+        passwordInput1.value = ""
+        passwordInput2.value = ""
         return
     } else {
         promptPar.textContent = ""
