@@ -22,8 +22,8 @@ let passwordLength = 8
 // Password length slider
 function updateLength(){
     passwordLength = slid3r.value
-    const min = slid3r.min
-    const max = slid3r.max
+    
+    // Indicate the password length
     rangeValue.textContent = passwordLength
 }
 
