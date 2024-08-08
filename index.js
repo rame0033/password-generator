@@ -22,7 +22,8 @@ let passwordLength = 8
 // Password length slider
 function updateLength(){
     passwordLength = slid3r.value
-    
+    const min = slid3r.min
+    const max = slid3r.max
     // Indicate the password length
     rangeValue.textContent = passwordLength
 }
@@ -48,9 +49,8 @@ function retrieveChar() {
     return characters
 }
 
-// Generate random character
+// Generate a random character from the array
 function charGen(){
-    // Generate a random character from the array
 
     // Retrieve characters
     let characters = retrieveChar()
