@@ -94,11 +94,18 @@ function copyPW(elementId){
     pwInputElement.select()
     pwInputElement.setSelectionRange(0, 99999); // For mobile devices
 
-    navigator.clipboard.writeText(pwInputElement.value)
-
-    alert("Password copied to clipboard")
-    console.log(`Password copied to clipboard: ${elementId}`)
+   navigator.clipboard.writeText(pwInputElement.value)
+        .then(() => {
+            alert("Password copied to clipboard");
+            console.log(`Password copied to clipboard: ${elementId}`);
+        })
+        .catch(err => {
+            console.error('Failed to copy password: ', err);
+        });
 }
 
-copyPW('firstPW-el'); // For the first password element
-copyPW('secondPW-el'); // For the second password element
+// Copy first password value on click
+document.getElementById("copy1").removeEventListener("click", copyPW);
+
+// Copy second password value on click
+document.getElementById("copy2").removeEventListener("click", copyPW);
