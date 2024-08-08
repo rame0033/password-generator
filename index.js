@@ -73,16 +73,19 @@ function generatePassword(){
 // Display generated passwords
 function gener4t3(){
 
-    // Check if at least one character type is selected
+    // If no character type is selected
     if (!check()){
         promptPar.textContent = "Please select at least one character type"
         passwordInput1.value = ""
         passwordInput2.value = ""
         return
+
+    // Error prompt will be hidden if a character type is selected
     } else {
         promptPar.textContent = ""
     }
 
+    // Display generated passwords to input fields
     passwordInput1.value = generatePassword()
     passwordInput2.value = generatePassword()   
     console.log("Password generated") 
