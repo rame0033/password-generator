@@ -226,14 +226,20 @@ button:not(#copy1):not(#copy2):active {
 /* Styling for larger screen */
 @media screen and (min-width: 620px) {
 
-    main{
-        padding:2rem;
+    main {
+        padding: 2rem;
     }
 
     /* Main heading for larger screens */
     h1 {
         font-size: 3rem;
         line-height: 2.9rem;
+    }
+
+    /* Adjust spacing for checkbox items */
+    .label {
+        margin-left: -0.5rem;
+        margin-right: 1rem;
     }
 
     /* Checkbox wrap */
