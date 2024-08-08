@@ -17,13 +17,14 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    padding: 0 0.65rem;
     background-color: var(--bg-color);
 }
 
 main {
     max-width: 41rem;
     border: 0.05rem solid var(--secondary-color);
-    padding: 2rem;
+    padding: 1.25rem;
     border-radius: 0.45rem;
 }
 
@@ -225,6 +226,10 @@ button:not(#copy1):not(#copy2):active {
 /* Styling for larger screen */
 @media screen and (min-width: 620px) {
 
+    main{
+        padding:2rem;
+    }
+    
     /* Main heading for larger screens */
     h1 {
         font-size: 3rem;
