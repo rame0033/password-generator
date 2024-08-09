@@ -93,7 +93,7 @@ function gener4t3(){
 
 // Copy button
 function copyPW(elementId){
-    var pwInputElement = document.getElementById(elementId);
+    let pwInputElement = document.getElementById(elementId);
     pwInputElement.select()
     pwInputElement.setSelectionRange(0, 99999); // For mobile devices
 
