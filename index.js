@@ -4,6 +4,8 @@ const passwordInput1 = document.querySelector("#firstPW-el")
 const passwordInput2 = document.querySelector("#secondPW-el")
 const slid3r = document.getElementById("pw-length")
 const rangeValue = document.getElementById("pw-length-value")
+const copy1BTN = document.getElementById("copy1")
+const copy2BTN = document.getElementById("copy2")
 let upperBox = document.getElementById("uppercaseBox")
 let lowerBox = document.getElementById("lowercaseBox")
 let symbolBox = document.getElementById("symBox")
@@ -93,22 +95,36 @@ function gener4t3(){
 
 // Copy button
 function copyPW(elementId){
-    let pwInputElement = document.getElementById(elementId);
-    pwInputElement.select()
-    pwInputElement.setSelectionRange(0, 99999); // For mobile devices
+    const copyText = document.getElementById(elementId);
+    copyText.select()
+    copyText.setSelectionRange(0, 99999); // For mobile devices
 
-   navigator.clipboard.writeText(pwInputElement.value)
-        .then(() => {
-            alert("Password copied to clipboard");
-            console.log(`Password copied to clipboard: ${elementId}`);
-        })
-        .catch(err => {
-            console.error('Failed to copy password: ', err);
-        });
+       navigator.clipboard.writeText(copyText.value)
+            .then(() => {
+                console.log(`Password copied to clipboard: ${elementId}`);
+            })
+            .catch(err => {
+                console.error('Failed to copy password: ', err);
+            });
+}
+
+// Event listener functions
+function copyFirstPassWord (){
+    copyPW("firstPW-el")
+    alert("First password copied to clipboard");
+}
+
+function copySecondPassword (){
+    copyPW("secondPW-el")
+    alert("Second password copied to clipboard");
 }
 
 // Copy first password value on click
-document.getElementById("copy1").addEventListener("click", copyPW);
+if (copy1BTN){
+    copy1BTN.addEventListener("click", copyFirstPassWord);
+} 
 
 // Copy second password value on click
-document.getElementById("copy2").addEventListener("click", copyPW);
+if (copy2BTN){
+    copy2BTN.addEventListener("click", copySecondPassword);
+}
