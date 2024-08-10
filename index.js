@@ -104,7 +104,7 @@ function copyPW(elementId){
                 console.log(`Password copied to clipboard: ${elementId}`);
             })
             .catch(err => {
-                console.error('Failed to copy password: ', err);
+                console.error('Error detected: ', err);
             });
 }
 
