@@ -17,7 +17,7 @@ body {
     display: grid;
     place-items: center;
     min-height: 100vh;
-    padding: 0.65rem;
+    padding: 0 0.65rem;
     background-color: var(--bg-color);
 }
 
