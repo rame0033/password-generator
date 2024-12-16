@@ -100,21 +100,6 @@ generateBtn.addEventListener("click", function () {
 }
 )
 
-// Copy button
-function copyPW(elementId) {
-    const copyText = document.getElementById(elementId);
-    copyText.select()
-    copyText.setSelectionRange(0, 99999); // For mobile devices
-
-    navigator.clipboard.writeText(copyText.value)
-        .then(() => {
-            console.log(`Password copied to clipboard: ${elementId}`);
-        })
-        .catch(err => {
-            console.error('Error detected: ', err);
-        });
-}
-
 // Add event listeners to all buttons with the "copy-btn" class
 document.querySelectorAll(".copy-btn").forEach(button => {
     button.addEventListener("click", () => {
