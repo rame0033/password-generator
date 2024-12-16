@@ -62,22 +62,22 @@
                     <label for="pw-length">Password Length</label>
                     <span id="pw-length-value">8</span>
                 </div>
-                <input type="range" id="pw-length" min="8" max="30" value="8" oninput="updateLength()">
+                <input type="range" id="pw-length" min="8" max="30" value="8">
             </div>
             <!-- Button -->
-            <button id="generate" onclick="gener4t3()">Generate Passwords</button>
+            <button id="generate">Generate Passwords</button>
         </div>
 
         <!-- Passwords -->
         <div class="passwords">
             <div class="pw_container">
                 <input type="text" id="firstPW-el" readonly>
-                <button id="copy1" onclick="copyPW('firstPW-el')"><i class='bx bxs-copy-alt'></i></button>
+                <button id="copy1" class="copy-btn" data-input-id="firstPW-el"><i class='bx bxs-copy-alt'></i></button>
             </div>
 
             <div class="pw_container">
                 <input type="text" id="secondPW-el" readonly></p>
-                <button id="copy2" onclick="copyPW('secondPW-el')"><i class='bx bxs-copy-alt'></i></button>
+                <button id="copy2" class="copy-btn" data-input-id="secondPW-el"><i class='bx bxs-copy-alt'></i></button>
             </div>
         </div>
     </main>
