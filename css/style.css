@@ -116,8 +116,7 @@ input[type="range"] {
     display: flex;
 }
 
-#copy1,
-#copy2 {
+.copy-btn {
     color: var(--primary-color);
     background-color: var(--secondary-color);
     border-radius: 0 0.5rem 0.5rem 0;
@@ -144,8 +143,7 @@ button:not(#copy1):not(#copy2):active {
     transform: scale(0.95);
 }
 
-#copy1:active,
-#copy2:active {
+.copy-btn:active {
     color: var(--secondary-color);
     background-color: var(--primary-color);
 }
